@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+
+*{
+  box-sizing: border-box;
+}
+body{
+  background-color: #0a0c41;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.hover-item:hover {
+  @apply bg-blue-400 h-full py-1 px-2 rounded-sm;
+}
