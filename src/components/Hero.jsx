@@ -37,7 +37,7 @@ function Hero (){
                 <button type="button" className="border-2 border-white rounded-3xl p-1 px-4 text-xl font-bold cursor-pointer hover:bg-purple-700 active:bg-purple-900 transition-all duration-600 " >Let's build what's next</button>
 
                 <div className="flex" > 
-                    <div className="w-1 h-1 border-2 border-white bg-white rounded-full animate-ping " ></div>
+                    <div className="w-1 h-1 border-2 border-white bg-white rounded-full animate-ping  " ></div>
                     <div>Booking new clients</div>
                 </div>            
                 {/* <div className="transform rotate-12 " >hello</div> */}                

@@ -9,11 +9,15 @@ function App() {
 
   return (
     <>
-    <div className='w-screen h-screen' >
-      {/* <div className='w-full h-full' >  */}
+    <div className='w-full h-full' >
+      <div className='w-full h-full bg-fixed' > 
         <Navbar/>
         <Hero/>
-      {/* </div> */}
+      </div>
+      
+      <div className='absolute  ' >
+        <Hero/>
+      </div>
 
     </div>
     </>
