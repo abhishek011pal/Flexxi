@@ -9,9 +9,11 @@ function App() {
 
   return (
     <>
-    <div className='w-full h-full' >
-      <Navbar/>
-      <Hero/>
+    <div className='w-screen h-screen' >
+      {/* <div className='w-full h-full' >  */}
+        <Navbar/>
+        <Hero/>
+      {/* </div> */}
 
     </div>
     </>
