@@ -1,33 +1,47 @@
 import { useState,useEffect } from "react";
 
-function Hero(){
-    const arr=['Creativity', 'Flexibility','Innovation','Growth','Impact','You']
-
-    const[words,setWord]=useState(arr[0]);
-
-    const [i, setI] = useState(0);
+function Hero (){
+    const [show, setShow] = useState (false);
 
     useEffect(() => {
-        const interval = setInterval(() => {
-        setI((prev) => {
-            const nextIndex = (prev + 1) % arr.length; 
-            setWord(arr[nextIndex]);
-            return nextIndex;
-        });
-        }, 1000);
+        const timer = setTimeout(() => {
+        setShow(true);
+        }, 400);
 
-        return () => clearInterval(interval); 
-    }, [arr]);
+        return () => clearTimeout(timer);
+    }, []);
+
 
     return (
         <>
-            <div className="bg-fixed w-2/3 h-[calc(100vh-70px)] flex justify-end p-8q  "  >
-                <div className=" flex flex-col flex-wrap items-start justify-end w-full  ">
-                    <div className="text-9xl text-wrap font-extrabold" >
-                        The Design Company Built For <span className="inline-block transform-3d -rotate-z-4 transition duration-500 text-10xl ">{words}</span>
-                    </div>              
-                </div>
+            <div className="w-2/3 p-8 flex flex-col gap-6 ">
+                <h1 className="text-9xl font-semibold w-full  "  >
+                    <span className=" ">The Design Company Built </span>  
+                    <div className="flex gap-8">
+                        <span>For </span>
+                        <span className={`
+                                text-shadow-sky-300 text-shadow-lg/50 transform transition-all duration-700
+                                ${show ? "opacity-100 translate-y-0 rotate-2" : "opacity-0 translate-y-10 translate-x-10 rotate-6"}
+                            `} >
+                            {/* <img src="" alt="" /> */}
+                            {/* Londrina Outline */}
+                            Creativity
+                        </span>
+                    </div>                  
+                </h1>
+
+                <h3 className="text-3xl p-4  " >The AI-focused design company for fast-moving teams building what's next.</h3>            
             </div>
+
+            <div className="w-full p-10 px-20 flex flex-row items-center justify-between relative bottom-0   "  >
+                <button type="button" className="border-2 border-white rounded-3xl p-1 px-4 text-xl font-bold cursor-pointer hover:bg-purple-700 active:bg-purple-900 transition-all duration-600 " >Let's build what's next</button>
+
+                <div className="flex" > 
+                    <div className="w-1 h-1 border-2 border-white bg-white rounded-full animate-ping " ></div>
+                    <div>Booking new clients</div>
+                </div>            
+                {/* <div className="transform rotate-12 " >hello</div> */}                
+            </div>                
         </>
     )
 }
