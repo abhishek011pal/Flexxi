@@ -11,7 +11,7 @@ function Navbar(){
 
     return(
         <>
-            <div className="w-full p-2 px-20 flex flex-row items-center justify-between">
+            <div className="w-full p-2 px-20 flex flex-row items-center justify-between fixed top-0 ">
                 <div className="scursor-pointer">
                     <svg width="80" height="50" xmlns="http://www.w3.org/2000/svg" className=" cursor-pointer   ">
                        <text x="50%" 
