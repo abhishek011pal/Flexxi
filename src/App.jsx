@@ -7,14 +7,14 @@ import Video from './components/Video'
 // import Summary from './components/Summary'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [navActive, setNavActive] = useState(false)
 
   return (
     <>
     <div className='w-full h-full overflow-x-hiddens relative ' >
-      <Navbar/>
-      <Hero/>
-      <Video/>
+      <Navbar active={navActive}  />
+      <Hero setNavActive={setNavActive} />
+      {/* <Video/> */}
     </div>
     </>
   )

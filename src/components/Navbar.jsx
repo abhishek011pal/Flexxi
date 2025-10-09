@@ -1,17 +1,28 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
-function Navbar(){
+const Navbar=({active})=>{
     
     const [icon,setIcon]=useState(false)
     
     function iconChanger(){        
         setIcon((prev) => !prev);
     }
+    useEffect(()=>{
+        function scrollhandler(){
+            // console.log(window.scrollY)
+        }
+        window.addEventListener('scroll',scrollhandler)
+    })
+
 
     return(
         <>
-            <div className="w-full p-0 px-20 flex flex-row items-center justify-between fixed top-0 z-50   "> 
+            <div className={`w-full p-0 px-20 flex flex-row items-center justify-between fixed top-0 z-50 
+            ${active? "bg-none": "bg-blue-950"} 
+            
+            `}
+            > 
                 <div className="cursor-pointer">
                     <svg width="80" height="50" xmlns="http://www.w3.org/2000/svg" className=" cursor-pointer   ">
                        <text x="50%" 
