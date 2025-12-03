@@ -12,4 +12,21 @@ body{
   background-color: black;
   color: white;
   background-color: #010331;  
+
 }
+
+@keyframes crousel{
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+
+}
+
+
+@theme {
+  --animate-crousel: crousel 25s linear infinite;
+}
+
